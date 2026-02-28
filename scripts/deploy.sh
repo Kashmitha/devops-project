@@ -47,7 +47,7 @@ git_pull() {
 	CURRENT_BRANCH=$(git branch --show-current)
 	log "Current branch: $CURRENT_BRANCH"
 	log "Git status: $(git status --short | wc -l) changed files"
-	# git checkout $BRANCH && git pull origin $BRANCH
+	git checkout $BRANCH && git pull origin $BRANCH
         log "Git pull simulated (no remote configured) ✅" 
 } 
 	
